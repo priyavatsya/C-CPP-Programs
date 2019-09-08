@@ -27,31 +27,45 @@ struct players
 int main()
 {
 int ns,nl,np,dice,init;
-
+cout<<"Enter number of snakes:- ";
 cin>>ns;
 struct snakee snake[ns];
 
    for(int i=0;i<ns;i++)
-   cin>>snake[i].head>>snake[i].tail;
-
+   {    
+       cout<<"Snake "<<i+1<<" head position:- "
+       cin>>snake[i].head;
+       cout<<"tail position:- ";
+       cin>>snake[i].tail;
+       cout<<endl;
+   }
 cout<<endl;
 
-
+cout<<"Enter number of Ladders:- ";
 cin>>nl;
 struct ladderr ladder[nl];
 
    for(int i=0;i<nl;i++)
-   cin>>ladder[i].start>>ladder[i].end;
+   {   cout<<"ladder "<<i+1<<" start position:- ";
+       cin>>ladder[i].start;
+       cout<<"end position:- ";
+       cin>>ladder[i].end;
+       cout<<endl;
+    
+   }
+    
 cout<<endl;
-
+cout<<"Enter no of players:- ";
 cin>>np;
 struct players player[np];
 
    for (int i=0;i<np;i++)
-   { cin>>player[i].name;
+   {   cout<<"Name of "<<i+1<<" player:- ";
+       cin>>player[i].name;
      player[i].pos=0; }
 
-
+cout<<endl<<"    !!!!!!!  GAME started  !!!!!!!!";
+    
 srand(time(0)); 
 
 while(1)
